@@ -1,0 +1,455 @@
+/* CONCERNE TOUTE LA PAGE (BODY, a, TITRES,ETC... */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+a{
+    text-decoration: none;
+    transition: color 0.3s;
+}z
+a:hover {
+    color: #d4af37;
+}
+
+a:link, a:visited, a:active{
+    color: #333;
+}
+
+/* HEADER */
+
+#menu {
+    background-color: #333;
+    border-bottom: ridge #d4af37;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu li{
+    padding: 0 24px;
+}
+
+#menu a {
+    color: white; 
+    font-size: 1.3rem; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#menu a:hover {
+    color: #d4af37;
+}
+
+
+/* MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+
+/* PAGE CONNEXION */
+
+.log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: ridge #d4af37;
+    padding: 24px 24px 0 24px;
+}
+
+.erreur{
+    color: red;
+    font-weight: bold;
+}
+
+input{
+    margin: 16px;
+}
+
+input:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+button{
+    padding: 8px 24px;
+    margin: 12px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    color: #d4af37;
+    transform: scale(1.1);
+}
+
+button:active {
+    color: #d4af37;
+    transform: scale(0.90);
+}
+
+
+
+/* DECONNEXION */
+
+.logout{
+    padding: 16px;
+    margin: 24px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: ridge #d4af37;
+}
+
+.logout a{
+    display: inline-block;
+    padding: 8px 24px;
+    margin-top: 12px;
+    background-color: #333;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logout a:hover{
+    color: #d4af37;
+    transform: scale(1.1);
+}
+
+.logout a:active {
+    color: #d4af37;
+    transform: scale(0.85);
+}
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: ridge #d4af37;
+    width: 100%;
+}
+footer p{
+    margin: 0;
+    padding: 8px;
+}
+
+
+
+
+/* PAGE ACCUEIL */
+
+.article__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+.article__item {
+    border: ridge #d4af37;
+    border-radius: 10px;
+    height: 250px;
+    width: 280px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.2s;
+}
+.article__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.447);
+}
+
+
+.article__item h2 {
+    margin: 0;
+    padding: 12px;
+}
+
+.article__item span {
+    font-size: 0.9rem;
+    color: #777;
+    padding: 0 12px;
+}
+
+.article__item p {
+    padding: 0 12px;
+}
+
+.article__item a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.article__item a:hover {
+    color: #d4af37;
+}
+
+
+
+
+/* PAGE ARTICLE */
+
+.postcomment {
+    width: 60%;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: ridge #d4af37;
+    margin-top: 24px;
+}
+
+.postcomment label{
+    margin: 12px 0 0 0 ;
+}
+
+.postcomment input,
+.postcomment textarea {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 8px;
+    padding-left: 4px;
+    @media (max-width: 400px) {
+        width: 80%;
+}
+}
+
+.postcomment textarea{
+    height: 64px ;
+    width: 80%;
+}
+
+.postcomment input:focus,
+.postcomment textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+.comments__title {
+    font-size: 2rem;
+}
+
+.comments__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments__item {
+    border-top: 1px solid #ddd;
+}
+
+.comments__content {
+    word-break: break-all;
+}
+
+
+
+
+
+/* PAGE ADMIN */
+.welcome, .addarticle{
+    padding: 16px;
+    margin: 24px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: ridge #d4af37;
+}
+
+/* FORMULAIRE AJOUTER UN ARTICLE */
+
+.addarticle{
+    width: 100%;
+}
+
+.addarticle__form{
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+
+
+.addarticle__label {
+    margin: 12px 0 0 0 ;
+}
+
+.addarticle__input,
+.addarticle__textarea {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 8px;
+    padding: 4px;
+    @media (max-width: 400px) {
+        width: 80%;
+}
+}
+
+.addarticle__textarea{
+    height: 128px ;
+    width: 80%;
+}
+
+.addarticle__input:focus,
+.addarticle__textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+
+
+/* LISTE D'ARTICLES (MODIFIER, SUPPRIMER) */
+
+.article-management__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+
+.article-management__actions{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.article-management__item-link {
+    display: inline-block;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin: 16px;
+    transition: transform 0.3s;
+}
+
+
+.article-management__item-link:hover {
+    color: #d4af37;
+    transform: scale(1.1);
+}
+
+.article-management__item-link:active {
+    color: #d4af37;
+    transform: scale(0.90);
+}
+
+
+
+
+
+/* SUPPRESSION ET MODIFICATION DES ARTICLES */
+
+.deletearticle,.update{
+    padding: 16px;
+    margin: 32px auto;
+    width: 60%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: ridge #d4af37;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.update form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+
+.update label{
+    margin: 12px 0 0 0 ;
+}
+
+.update input,
+.update textarea {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 8px;
+    padding: 4px;
+    color: #333;
+}
+
+
+@media (max-width: 400px) {
+    .update input,.update textarea {
+    width: 80%;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+.update textarea{
+    height: 300px ;
+    width: 100%;
+}
+
+.update input:focus,
+.update textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+}
+
+
