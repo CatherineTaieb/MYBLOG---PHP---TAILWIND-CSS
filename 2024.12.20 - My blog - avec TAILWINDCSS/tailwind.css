@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    main {
+      @apply flex flex-col justify-between items-center text-gray-800 m-auto w-4/5;
+    }
+
+
+    a:hover {
+      color: #d4af37;
+      transition: color 0.3s;
+    }
+
+    h1 {
+      @apply text-4xl font-bold m-8;
+    }
+
+}
+
+
+@layer components {
+  button {
+    @apply px-6 py-2 m-3 bg-gray-800 text-white font-bold rounded-lg cursor-pointer transition-transform duration-300; 
+    border: none;
+  }
+
+  button:hover {
+    @apply text-amber-500;
+    transform: scale(1.1);
+  }
+
+  button:active {
+    @apply text-amber-500;
+    transform: scale(0.90);
+  }
+
+  button:focus{
+    outline: none;
+  }
+
+}
+
+
+
+
+@layer utilities {
+    .border-ridge {
+        border-style: ridge;
+    }
+}
